@@ -11,8 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="card">
-    <model-viewer id="toggle-model" src="iitpl.glb" alt="A 3D model of a shishkebab" shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate></model-viewer>
+ <div id="card">
+<model-viewer id="toggle-model" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" touch-action="pan-y" ></model-viewer>
 <script>
     const models = ['iitpl.glb', 'asset.glb'];
     const toggleModel = document.querySelector('#toggle-model');
