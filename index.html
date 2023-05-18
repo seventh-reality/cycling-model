@@ -19,10 +19,19 @@
         <button class="slide" onclick="switchSrc('TNA.glb')" style="background-image: url('poster.webp');">2
         </button>
         </dev>     
-         
-    
     </model-viewer>
-    <section class="attributiontwo">
+    
+    
+<script>
+    const models = ['iitpl.glb', 'asset.glb'];
+    const toggleModel = document.querySelector('#toggle-model');
+    // let j = 0;
+    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
+    function switchSrc(src){
+        toggleModel.setAttribute('src', `${src}`);
+    }
+</script>
+<section class="attributiontwo">
        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
       
       <span>
@@ -34,17 +43,8 @@
             
       </span>
    
-    </section>
-    
-<script>
-    const models = ['iitpl.glb', 'asset.glb'];
-    const toggleModel = document.querySelector('#toggle-model');
-    // let j = 0;
-    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
-    function switchSrc(src){
-        toggleModel.setAttribute('src', `${src}`);
-    }
-</script>
+    </section>        
+        
     
 </dev> 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
