@@ -12,17 +12,29 @@
 </head>
 <body>
     <div id="card">
-    <model-viewer id="toggle-model" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model of a shishkebab" shadow-intensity="1" poster="poster.webp"  touch-action="pan-y" auto-rotate>
+    <model-viewer id="toggle-model" src="iitpl.glb" alt="A 3D model of a shishkebab" shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate>
         <div style="text-align: center;">
-        <button class="slide selected" onclick="switchSrc('iitpl.glb')" style="background-image: url('poster.webp');">1
-        </button>
-        <button class="slide" onclick="switchSrc('TNA.glb')" style="background-image: url('poster.webp');">2
-        </button>
-        </dev>     
+            <button class="slide selected" onclick="switchSrc('iitpl.glb')" style="background-image: url('poster.webp');">1
+            </button>
+            <button class="slide" onclick="switchSrc('asset.glb')" style="background-image: url('poster.webp');">2
+            </button>
+        </div>
     </model-viewer>
+    <section class="attributiontwo">
+        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
+       
+       <span>
+         <a href="https://drive.google.com/file/d/17ENqgYiIehtTJLoKu1tHC5S6sj9mdDCj/view?usp=sharing"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a>
+         <a href="https://drive.google.com/file/d/1qp8oTnwX4qtDK-SBT2PsBxhJ-ilR1idb/view?usp=sharing"><img src="Video.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="https://www.jnjmedtech.com/en-US/product/tn-advanced"><img src="web.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide%20-%20TN-Advanced%20Tibial%20Nailing%20System-Suprapatellar%20Appooach.pdf"><img src="serch.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link"><img src="form.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+             
+       </span>
     
+    </section>        
     
-    <script>
+<script>
     const models = ['iitpl.glb', 'asset.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
@@ -30,23 +42,9 @@
     function switchSrc(src){
         toggleModel.setAttribute('src', `${src}`);
     }
-    </script>
-    <section class="attributiontwo">
-       <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
-      
-      <span>
-        <a href="https://drive.google.com/file/d/17ENqgYiIehtTJLoKu1tHC5S6sj9mdDCj/view?usp=sharing"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a>
-        <a href="https://drive.google.com/file/d/1qp8oTnwX4qtDK-SBT2PsBxhJ-ilR1idb/view?usp=sharing"><img src="Video.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
-        <a href="https://www.jnjmedtech.com/en-US/product/tn-advanced"><img src="web.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
-        <a href="http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide%20-%20TN-Advanced%20Tibial%20Nailing%20System-Suprapatellar%20Appooach.pdf"><img src="serch.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link"><img src="form.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
-            
-      </span>
-   
-     </section>        
-        
+</script>
     
-  </dev> 
+</dev> 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
