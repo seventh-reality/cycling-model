@@ -11,13 +11,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
- <div id="card">
-<model-viewer id="toggle-model" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" touch-action="pan-y" ></model-viewer>
+    <div id="card"></div>
+    <model-viewer id="toggle-model" src="iitpl.glb" alt="A 3D model of a shishkebab" shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate>
+        <button class="slide selected" onclick="switchSrc('iitpl.glb')" style="background-image: url('poster.webp');">1
+        </button>
+        <button class="slide" onclick="switchSrc('asset.glb')" style="background-image: url('Mixer.webp');">2
+        </button>
+         
+    
+    </model-viewer>
+    
 <script>
     const models = ['iitpl.glb', 'asset.glb'];
     const toggleModel = document.querySelector('#toggle-model');
-    let j = 0;
-    setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
+    // let j = 0;
+    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
+    function switchSrc(src){
+        toggleModel.setAttribute('src', `${src}`);
+    }
 </script>
     
 </dev> 
