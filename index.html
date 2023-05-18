@@ -39,10 +39,10 @@
     </section>        
     
 <script>
-    const models = ['iitpl.glb', 'asset.glb', TNA.glb];
+    const models = ['iitpl.glb', 'asset.glb', 'TNA.glb', 'pac man.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
-    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 3]}`), 2000);
+    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
     function switchSrc(src){
         toggleModel.setAttribute('src', `${src}`);
     }
