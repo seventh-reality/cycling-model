@@ -17,7 +17,7 @@
 	<div style ="height: 50px; width: 50px; border-style : outset; border-width:1px;border-radius : 10px;box-shadow :3px 3px 3px #969696 ;padding:1px 10px 0px 10px;cursor:pointer;" onclick="play_to_end()">Try it</div>    
         <button class="slide selected" id="iitpl" onclick="switchSrc(1,'iitpl.glb')"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
         <button class="slide" id="tna" onclick="switchSrc(2,'TNA.glb')" style="float:right;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
-        <span><button class="slide selected" id="Brochure" onclick="switchSrc(3,'iitpl.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <span><button class="slide selected" id="Brochure" onclick="switchSrc(3,'TFNA.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
         <button class="slide" onclick="switchSrc(4,'TNA.glb')" id="tna2" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button></span>
         <button class="slide selected" id="5" onclick="switchSrc(5,'pac man.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
         <button class="slide" onclick="switchSrc(6,'1.glb')" id="6" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
@@ -57,7 +57,7 @@ function stop(){
 const modelViewer = document.querySelector('#homme');
 modelViewer.pause();
 }
-    const models = ['iitpl.glb', 'TNA.glb', 'asset.glb', '1.glb'];
+    const models = ['iitpl.glb', 'TNA.glb', 'asset.glb', '1.glb','TFNA.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
     // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
