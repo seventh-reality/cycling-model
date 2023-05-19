@@ -219,9 +219,9 @@ input:checked+.slider:before {
 }
 
 button {
-  border: 1px outset #6c6c6c;
-  background-color: #eee;
-  padding: .4em 1.6em;
+  border: 1px outset #ffffff00;
+  background-color: #fff0;
+  padding: 1.4em 1.6em;
   border-radius: 6px;
   font-weight: 600;
 }
