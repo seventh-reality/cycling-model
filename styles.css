@@ -225,7 +225,7 @@ button {
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
-  top: 100%;
+  top: 85%;
 }
 
 button:hover {
