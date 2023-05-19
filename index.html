@@ -12,17 +12,21 @@
 </head>
 <body>
     <div id="card">
-    <model-viewer id="toggle-model" src="iitpl.glb"  shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" touch-action="pan-y" auto-rotate>
-        <div style="text-align: center;">
-            <button class="slide selected" onclick="switchSrc('iitpl.glb')" style="background-image: url('poster.webp');">1
-            </button>
-            <button class="slide" onclick="switchSrc('TNA.glb')" style="background-image: url('poster.webp');">2
-            </button>
-            <button class="slide" onclick="switchSrc('asset.glb')" style="background-image: url('poster.webp');">3
-            </button>
-            <button class="slide" onclick="switchSrc('RingApplicator.glb')" style="background-image: url('poster.webp');">4
-            </button>
-        </div>
+    <model-viewer id="toggle-model" src="iitpl.glb" alt="A 3D model of a shishkebab" shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate>
+        <button class="slide selected" id="iitpl" onclick="switchSrc(1,'iitpl.glb')"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide" id="tna" onclick="switchSrc(2,'TNA.glb')" style="float:right;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <span><button class="slide selected" id="Brochure" onclick="switchSrc(3,'iitpl.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide" onclick="switchSrc(4,'TNA.glb')" id="tna2" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button></span>
+        <button class="slide selected" id="5" onclick="switchSrc(5,'pac man.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide" onclick="switchSrc(6,'TNA.glb')" id="6" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide selected" id="7" onclick="switchSrc(7,'asset.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide" onclick="switchSrc(8,'TNA.glb')" id="8" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide selected" id="9" onclick="switchSrc(9,'iitpl.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide" onclick="switchSrc(10,'TNA.glb')" id="10" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        
+             
+          
+       
     </model-viewer>
     <section class="attributiontwo">
         <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
@@ -39,12 +43,89 @@
     </section>        
     
 <script>
-    const models = ['iitpl.glb', 'asset.glb', 'TNA.glb', 'RingApplicator.glb'];
+    const models = ['iitpl.glb', 'TNA.glb', 'asset.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
     // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
-    function switchSrc(src){
-        toggleModel.setAttribute('src', `${src}`);
+    function switchSrc(indx,src){
+        // if(indx == 2){
+        //     document.getElementById("iitpl").style.setProperty('display','none');
+        //     document.getElementById("tna").style.setProperty('display','none');
+        //     document.getElementById("Brochure").style.setProperty('display','inline');
+        //     document.getElementById("tna2").style.setProperty('display','inline');
+        //     document.getElementById("tna2").style.setProperty('float','right');
+        // }else if(indx== 3){
+        //     document.getElementById("iitpl").setAttribute('style','display:inline');
+        //     document.getElementById("tna").setAttribute('style','display:inline');
+        //     document.getElementById("tna").style.setProperty('float','right');
+        //     document.getElementById("Brochure").setAttribute('style','display:none');
+        //     document.getElementById("tna2").setAttribute('style','display:none');
+        // }else if(indx== 5){
+        //     document.getElementById("iitpl").setAttribute('style','display:inline');
+        //     document.getElementById("tna").setAttribute('style','display:inline');
+        //     document.getElementById("tna").style.setProperty('float','right');
+        // }
+                document.getElementById("iitpl").style.setProperty('display','none');
+                document.getElementById("tna").style.setProperty('display','none');
+                document.getElementById("Brochure").style.setProperty('display','none');
+                document.getElementById("tna2").style.setProperty('display','none');
+                document.getElementById("5").style.setProperty('display','none');
+                document.getElementById("6").style.setProperty('display','none');
+                document.getElementById("7").style.setProperty('display','none');
+                document.getElementById("8").style.setProperty('display','none');
+                document.getElementById("9").style.setProperty('display','none');
+                document.getElementById("10").style.setProperty('display','none');
+        switch (indx) {
+            case 2:  
+                document.getElementById("Brochure").style.setProperty('display','inline');
+                document.getElementById("tna2").style.setProperty('display','inline');
+                document.getElementById("tna2").style.setProperty('float','right');
+                break;
+            case 3:
+                document.getElementById("iitpl").setAttribute('style','display:inline');
+                document.getElementById("tna").setAttribute('style','display:inline');
+                document.getElementById("tna").style.setProperty('float','right');
+            break;
+            case 4:
+                document.getElementById("5").setAttribute('style','display:inline');
+                document.getElementById("6").setAttribute('style','display:inline');
+                document.getElementById("6").style.setProperty('float','right');
+            break;
+            case 5:
+                document.getElementById("Brochure").setAttribute('style','display:inline');
+                document.getElementById("tna2").setAttribute('style','display:inline');
+                document.getElementById("tna2").style.setProperty('float','right');
+            break;
+            case 6:
+                document.getElementById("7").setAttribute('style','display:inline');
+                document.getElementById("8").setAttribute('style','display:inline');
+                document.getElementById("8").style.setProperty('float','right');
+            break;
+            case 7:
+                document.getElementById("5").setAttribute('style','display:inline');
+                document.getElementById("6").setAttribute('style','display:inline');
+                document.getElementById("6").style.setProperty('float','right');
+            break;
+            case 8:
+                document.getElementById("9").setAttribute('style','display:inline');
+                document.getElementById("10").setAttribute('style','display:inline');
+                document.getElementById("10").style.setProperty('float','right');
+            break;
+            case 9:
+                document.getElementById("7").setAttribute('style','display:inline');
+                document.getElementById("8").setAttribute('style','display:inline');
+                document.getElementById("8").style.setProperty('float','right');
+            break;
+            
+            
+        
+            default:
+                document.getElementById("iitpl").style.setProperty('display','inline');
+                document.getElementById("tna").style.setProperty('display','inline');
+                document.getElementById("tna").style.setProperty('float','right');
+            break;
+        }
+        toggleModel.setAttribute('src', `${src}`);  
     }
 </script>
     
