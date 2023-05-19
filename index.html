@@ -12,9 +12,9 @@
 </head>
 <body>
     <div id="card">
-   
+   <div style ="height: 50px; width: 50px; border-style : outset; border-width:1px;border-radius : 10px;box-shadow :3px 3px 3px #969696 ;padding:1px 10px 0px 10px;cursor:pointer;" onclick="play_to_end()">Try it</div>
     <model-viewer id="toggle-model" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model of a shishkebab" shadow-intensity="1"  touch-action="pan-y" autoplay >
-	<div style ="height: 50px; width: 50px; border-style : outset; border-width:1px;border-radius : 10px;box-shadow :3px 3px 3px #969696 ;padding:1px 10px 0px 10px;cursor:pointer;" onclick="play_to_end()">Try it</div>    
+	    
         <button class="slide selected" id="iitpl" onclick="switchSrc(1,'iitpl.glb')"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
         <button class="slide" id="tna" onclick="switchSrc(2,'TNA.glb')" style="float:right;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
         <span><button class="slide selected" id="Brochure" onclick="switchSrc(3,'TFNA.glb')"  style="display: none;"><img src="Left.png" id="youtube-icon" style="width:40px;height:40px;"></button>
@@ -45,18 +45,7 @@
     </section>        
     
 <script>
-    function play_to_end (){
-//play to end or rewind if animation is at end//
-	const modelViewer = document.querySelector('#homme');
-	modelViewer.play();
-	t=modelViewer.duration;
-	t=t*1000/2 ;// because duration is in second and time to play and rewind//
-	setTimeout(stop, t);
-}
-function stop(){
-const modelViewer = document.querySelector('#homme');
-modelViewer.pause();
-}
+    
     const models = ['iitpl.glb', 'TNA.glb', 'asset.glb', '1.glb','TFNA.glb','bloodsny.glb','VAclavicle.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
@@ -142,7 +131,23 @@ modelViewer.pause();
         toggleModel.setAttribute('src', `${src}`);  
     }
 </script>
-    
+<script>
+function play_to_end (){
+//play to end or rewind if animation is at end//
+	const modelViewer = document.querySelector('#homme');
+	modelViewer.play();
+	t=modelViewer.duration;
+	t=t*1000/2 ;// because duration is in second and time to play and rewind//
+	setTimeout(stop, t);
+}
+function stop(){
+const modelViewer = document.querySelector('#homme');
+modelViewer.pause();
+}
+</script>    
+	    
+	    
+	       
 </dev> 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
