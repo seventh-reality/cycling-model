@@ -224,6 +224,8 @@ button {
   padding: 1.4em 1.6em;
   border-radius: 6px;
   font-weight: 600;
+  position: sticky;
+  top: 100%;
 }
 
 button:hover {
