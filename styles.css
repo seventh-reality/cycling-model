@@ -221,7 +221,7 @@ input:checked+.slider:before {
 button {
   border: 1px outset #ffffff00;
   background-color: #fff0;
-  padding: 20em 1.6em;
+  padding: 1.4em 1.6em;
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
