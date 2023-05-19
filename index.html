@@ -134,14 +134,14 @@
 <script>
 function play_to_end (){
 //play to end or rewind if animation is at end//
-	const modelViewer = document.querySelector('#homme');
+	const modelViewer = document.querySelector('#iitpl','#tna','#Brochure','#tna2','#5','#6','#7','#8','#9','#10');
 	modelViewer.play();
 	t=modelViewer.duration;
 	t=t*1000/2 ;// because duration is in second and time to play and rewind//
 	setTimeout(stop, t);
 }
 function stop(){
-const modelViewer = document.querySelector('#homme');
+const modelViewer = document.querySelector('#iitpl','#tna','#Brochure','#tna2','#5','#6','#7','#8','#9','#10');
 modelViewer.pause();
 }
 </script>    
