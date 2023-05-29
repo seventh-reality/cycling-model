@@ -34,7 +34,7 @@
         <button class="slide" onclick="switchSrc(10,'10.glb')" id="10" style="float: right;display: none;"><img src="Right.png" id="youtube-icon" style="width:40px;height:40px;"></button>
 	<button onclick="play_to_end()"><img src="play.png" id="youtube-icon" style="width:40px;height:40px; position: sticky; left: 50px; padding-left: 75px"></button>      
         
-         <a rel="ar" id="CustomBanner" href="TNA.usdz#custom=https://www.youtube.com/watch?v=uIyr_HZn7t0&customHeight=medium"></a>
+        
        
              
           
@@ -154,26 +154,7 @@ function stop(){
 const modelViewer = document.querySelector('#toggle-model');
 modelViewer.pause();
 }
-import UIKit
-import QuickLook
-import ARKit
 
-class ViewController: UIViewController, QLPreviewControllerDataSource {
-
-    override func viewDidAppear(_ animated: Bool) {
-        let previewController = QLPreviewController()
-        previewController.dataSource = self
-        present(previewController, animated: true, completion: nil)
-    }
-
-    func numberOfPreviewItems(in controller: QLPreviewController) -> Int { return 1 }
-
-    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        guard let path = Bundle.main.path(forResource: "myScene", ofType: "reality") else { fatalError("Couldn't find the supported input file.") }
-        let url = URL(fileURLWithPath: path)
-        return url as QLPreviewItem
-    }    
-}
 </script>    
 	    
 	    
