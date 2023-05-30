@@ -240,8 +240,14 @@ button1 {
 button:hover {
   background-color: #ccf;
 }
+button1:hover {
+  background-color: #ccf;
+}
 
 button.disabled {
+  background-color: #ccc;
+}
+button1.disabled {
   background-color: #ccc;
 }
 
