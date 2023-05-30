@@ -227,6 +227,15 @@ button {
   position: sticky;
   top: 80%;
 }
+button1 {
+  border: 1px outset #ffffff00;
+  background-color: #fff0;
+  padding: 0em 0em;
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 80%;
+}
 
 button:hover {
   background-color: #ccf;
